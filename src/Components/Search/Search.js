@@ -6,10 +6,11 @@ class Search extends React.Component {
     return(
       <Form>
         <Form.Group>
-          <Form.Label>City Name</Form.Label>
+          <Form.Label htmlFor='cityName'>City Name: </Form.Label>
           <Form.Control
             type='text'
             placeholder='start typing...'
+            id='cityName'
             onChange={this.props.handleChange}
           />
           <button
