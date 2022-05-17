@@ -8,17 +8,24 @@ class Main extends React.Component {
       <>
         <Item
           data={this.props.data}
+          isSearched={this.props.isSearched}
+          error={this.props.error}
+          errorMessage={this.props.errorMessage}
         />
-        {this.props.isMapDisplaying
+        {this.props.error
           ?
-          <Figure>
-            <Figure.Image
-              alt='map'
-              src={this.props.map}
-            />
-          </Figure>
+          <></>
           :
-          <Figure></Figure>
+          this.props.isSearched
+            ?
+            <Figure>
+              <Figure.Image
+                alt='map'
+                src={this.props.map}
+              />
+            </Figure>
+            :
+            <></>
         }
       </>
     );

@@ -2,7 +2,7 @@
 
 **Author**: Dana Huffman
 
-**Version**: 1.0.2
+**Version**: 1.0.3
 
 ## Overview
 
@@ -21,6 +21,7 @@ Created using React, Bootstrap, JavaScript, CSS, HTML, and Axios
 05-16-2022 2:58pm - Completed initialization of project
 05-16-2022 4:06pm - Completed Location Search feature - added styling for location Card
 05-16-2022 6:35pm - Added map to location search feature
+05-16-2022 7:03pm - Added error catch feature
 
 ## Credit and Collaborations
 
@@ -49,3 +50,13 @@ Start time: 4:24
 Finish time: 5:59
 
 Actual time needed to complete: 1 hour 35 min
+
+Name of feature: **#3 Errors**
+
+Estimate of time needed to complete: 20 min
+
+Start time: 6:38
+
+Finish time: 7:02
+
+Actual time needed to complete: 24 min

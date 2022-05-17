@@ -15,3 +15,13 @@
   color: azure;
   margin: -2.6px;
 }
+
+.alert-primary {
+  background-color: crimson;
+  width: fit-content;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 3px solid darkred;
+  color: azure;
+}

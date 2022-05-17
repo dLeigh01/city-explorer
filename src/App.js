@@ -11,19 +11,28 @@ class App extends React.Component {
       city: '',
       data: '',
       map: '',
-      isMapDisplaying: false,
+      isSearched: false,
+      error: false,
+      errorMessage: '',
     }
   }
 
   handleSubmit = async (event) => {
     event.preventDefault();
-
-    let cityData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${this.state.city}&format=json`);
-    this.setState({
-      data: cityData.data[0],
-      map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_API_KEY}&center=${cityData.data[0].lat},${cityData.data[0].lon}&zoom=12`,
-      isMapDisplaying: true,
-    });
+    try {
+        let cityData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${this.state.city}&format=json`);
+        this.setState({
+          data: cityData.data[0],
+          map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_API_KEY}&center=${cityData.data[0].lat},${cityData.data[0].lon}&zoom=12`,
+          isSearched: true,
+          error: false,
+        });
+    } catch (error){
+      this.setState({
+        error: true,
+        errorMessage: error.message,
+      })
+    }
   }
 
   handleChange = (event) => {
@@ -42,7 +51,9 @@ class App extends React.Component {
         <Main
           data={this.state.data}
           map={this.state.map}
-          isMapDisplaying={this.state.isMapDisplaying}
+          isSearched={this.state.isSearched}
+          error={this.state.error}
+          errorMessage={this.state.errorMessage}
         />
       </>
     );
