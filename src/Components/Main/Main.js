@@ -1,0 +1,35 @@
+import React from "react";
+import Item from "../Item/Item.js"
+import Figure from "react-bootstrap/Figure";
+
+class Main extends React.Component {
+  render() {
+    return(
+      <>
+        <Item
+          data={this.props.data}
+          isSearched={this.props.isSearched}
+          error={this.props.error}
+          errorMessage={this.props.errorMessage}
+        />
+        {this.props.error
+          ?
+          <></>
+          :
+          this.props.isSearched
+            ?
+            <Figure>
+              <Figure.Image
+                alt='map'
+                src={this.props.map}
+              />
+            </Figure>
+            :
+            <></>
+        }
+      </>
+    );
+  }
+}
+
+export default Main;
