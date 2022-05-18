@@ -11,6 +11,7 @@ class Main extends React.Component {
           isSearched={this.props.isSearched}
           error={this.props.error}
           errorMessage={this.props.errorMessage}
+          weatherData={this.props.weatherData}
         />
         {this.props.error
           ?

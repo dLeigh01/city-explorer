@@ -14,6 +14,7 @@ class App extends React.Component {
       isSearched: false,
       error: false,
       errorMessage: '',
+      weatherData: [],
     }
   }
 
@@ -21,11 +22,13 @@ class App extends React.Component {
     event.preventDefault();
     try {
         let cityData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${this.state.city}&format=json`);
+        let weather = await axios.get(`http://localhost:3001/weather?searchQuery=${this.state.city}&lat=${cityData.data[0].lat}&lon=${cityData.data[0].lon}&format=json`);
         this.setState({
           data: cityData.data[0],
           map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_API_KEY}&center=${cityData.data[0].lat},${cityData.data[0].lon}&zoom=12`,
           isSearched: true,
           error: false,
+          weatherData: weather.data,
         });
     } catch (error){
       this.setState({
@@ -54,6 +57,7 @@ class App extends React.Component {
           isSearched={this.state.isSearched}
           error={this.state.error}
           errorMessage={this.state.errorMessage}
+          weatherData={this.state.weatherData}
         />
       </>
     );

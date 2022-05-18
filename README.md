@@ -2,7 +2,7 @@
 
 **Author**: Dana Huffman
 
-**Version**: 1.0.3
+**Version**: 1.1.0
 
 ## Overview
 
@@ -11,10 +11,11 @@ This app is designed to allow a user to input a city name and retrieve informati
 ## Getting Started
 
 - Run `npm install`
+- Add your API key to .env.sample
 
 ## Architecture
 
-Created using React, Bootstrap, JavaScript, CSS, HTML, and Axios
+Created using Node, React, Bootstrap, JavaScript, CSS, HTML, and Axios
 
 ## Change Log
 
@@ -22,12 +23,19 @@ Created using React, Bootstrap, JavaScript, CSS, HTML, and Axios
 05-16-2022 4:06pm - Completed Location Search feature - added styling for location Card
 05-16-2022 6:35pm - Added map to location search feature
 05-16-2022 7:03pm - Added error catch feature
+05-17-2022 7:20 - Added weather API call
 
 ## Credit and Collaborations
 
+![WRRC Lab 06](./wrrc-lab06.jpg) Made with [Provida Powell](https://github.com/Vida-1)
+
 [class demo](https://github.com/codefellows/seattle-code-301d85/tree/main/class-06/in-class-demo/api-call)
+
 [trello board template](https://trello.com/b/Ajj9Cbac/module-2-city-explorer)
+
 [bootstrap component guide](https://react-bootstrap.github.io/components/cards)
+
+![WRRC Lab 07](./wrrc-lab07.jpg) Made with [Denis Rendon](https://github.com/DenisRendon) and [Cheri Hodge](https://github.com/cheriezus)
 
 ## Time Estimates
 
