@@ -6,7 +6,7 @@ import Alert from "react-bootstrap/Alert"
 class Item extends React.Component {
   render() {
     let forecast = this.props.weatherData.map(day => 
-      <Card.Text key={day.date}>{day.date}: {day.description}</Card.Text>
+      <Card.Text key={day.date}>{day.date}: {day.description}<br></br>High of {day.high}&deg; | Low of {day.low}&deg;</Card.Text>
     );
 
     return(
