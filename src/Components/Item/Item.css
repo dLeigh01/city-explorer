@@ -25,3 +25,11 @@
   border: 3px solid darkred;
   color: azure;
 }
+
+.card-subtitle {
+  text-align: center;
+  font-size: 1.7rem;
+  background-color: darkgreen;
+  padding: 3px;
+  color: azure;
+}

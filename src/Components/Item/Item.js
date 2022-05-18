@@ -5,6 +5,10 @@ import Alert from "react-bootstrap/Alert"
 
 class Item extends React.Component {
   render() {
+    let forecast = this.props.weatherData.map(day => 
+      <Card.Text key={day.date}>{day.date}: {day.description}</Card.Text>
+    );
+
     return(
       <>
         {this.props.error
@@ -21,6 +25,10 @@ class Item extends React.Component {
                 <Card.Text>Latitude: {this.props.data.lat}</Card.Text>
                 <Card.Text>Longitude: {this.props.data.lon}</Card.Text>
               </Card.Body>
+              <Card.Footer>
+                <Card.Subtitle>Weather</Card.Subtitle>
+                {forecast}
+              </Card.Footer>
             </Card>
             :
             <></>
