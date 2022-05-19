@@ -2,7 +2,7 @@
 
 **Author**: Dana Huffman
 
-**Version**: 1.1.0
+**Version**: 1.2.1
 
 ## Overview
 
@@ -23,7 +23,9 @@ Created using Node, React, Bootstrap, JavaScript, CSS, HTML, and Axios
 05-16-2022 4:06pm - Completed Location Search feature - added styling for location Card
 05-16-2022 6:35pm - Added map to location search feature
 05-16-2022 7:03pm - Added error catch feature
-05-17-2022 7:20 - Added weather API call
+05-17-2022 7:20pm - Added weather API call
+05-18-2022 4:55pm - Added new data to weather display
+05-18-2022 8:36pm - Added display for movie data
 
 ## Credit and Collaborations
 
@@ -36,6 +38,10 @@ Created using Node, React, Bootstrap, JavaScript, CSS, HTML, and Axios
 [bootstrap component guide](https://react-bootstrap.github.io/components/cards)
 
 ![WRRC Lab 07](./wrrc-lab07.jpg) Made with [Denis Rendon](https://github.com/DenisRendon) and [Cheri Hodge](https://github.com/cheriezus)
+
+![WRRC Lab 08](./wrrc-lab08.jpg) Made with [Elizabeth Hammes](https://github.com/ehammes)
+
+[class demo](https://github.com/codefellows/seattle-code-301d85/tree/main/class-08/in-class-demo/image-finder-front-end)
 
 ## Time Estimates
 

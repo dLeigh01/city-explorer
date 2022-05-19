@@ -1,0 +1,22 @@
+.list-group {
+  background-color: azure;
+  width: 20rem;
+  padding: 3px;
+  border-radius: 5px;
+  border: 3px solid black;
+  margin: 1rem;
+}
+
+.list-group-item {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+h4 {
+  background-color: darkgreen;
+  text-align: center;
+  padding: 3px;
+  height: 2rem;
+  color: azure;
+  margin: -3px;
+}
