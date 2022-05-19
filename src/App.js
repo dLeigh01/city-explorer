@@ -15,6 +15,8 @@ class App extends React.Component {
       error: false,
       errorMessage: '',
       weatherData: [],
+      movieData: [],
+      isMovieDataAvailable: false,
     }
   }
 
@@ -23,12 +25,15 @@ class App extends React.Component {
     try {
         let cityData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${this.state.city}&format=json`);
         let weather = await axios.get(`${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}&lat=${cityData.data[0].lat}&lon=${cityData.data[0].lon}&format=json`);
+        let movies = await axios.get(`${process.env.REACT_APP_SERVER}/movies?searchQuery=${this.state.city}&format=json`);
         this.setState({
           data: cityData.data[0],
           map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_API_KEY}&center=${cityData.data[0].lat},${cityData.data[0].lon}&zoom=12`,
           isSearched: true,
           error: false,
           weatherData: weather.data,
+          movieData: movies.data,
+          isMovieDataAvailable: true,
         });
     } catch (error){
       this.setState({
@@ -58,6 +63,8 @@ class App extends React.Component {
           error={this.state.error}
           errorMessage={this.state.errorMessage}
           weatherData={this.state.weatherData}
+          movieData={this.state.movieData}
+          isMovieDataAvailable={this.state.isMovieDataAvailable}
         />
       </>
     );
