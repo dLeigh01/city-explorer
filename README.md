@@ -2,7 +2,7 @@
 
 **Author**: Dana Huffman
 
-**Version**: 1.2.1
+**Version**: 1.3.0
 
 ## Overview
 
@@ -26,6 +26,7 @@ Created using Node, React, Bootstrap, JavaScript, CSS, HTML, and Axios
 05-17-2022 7:20pm - Added weather API call
 05-18-2022 4:55pm - Added new data to weather display
 05-18-2022 8:36pm - Added display for movie data
+05-19-2022 5:20pm - Added WeatherDay and Movie
 
 ## Credit and Collaborations
 
@@ -42,6 +43,8 @@ Created using Node, React, Bootstrap, JavaScript, CSS, HTML, and Axios
 ![WRRC Lab 08](./wrrc-lab08.jpg) Made with [Elizabeth Hammes](https://github.com/ehammes)
 
 [class demo](https://github.com/codefellows/seattle-code-301d85/tree/main/class-08/in-class-demo/image-finder-front-end)
+
+![WRRC Lab 09](./wrrc-lab09.jpg) Made with [Vinny Shipley](https://github.com/VinnyShipley)
 
 ## Time Estimates
 
@@ -74,3 +77,13 @@ Start time: 6:38
 Finish time: 7:02
 
 Actual time needed to complete: 24 min
+
+Name of feature: **#4 Componentize**
+
+Estimate of time needed to complete: 45 min
+
+Start time: 4:35
+
+Finish time: 5:17
+
+Actual time needed to complete: 42 min
