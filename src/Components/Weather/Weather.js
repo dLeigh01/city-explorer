@@ -1,12 +1,16 @@
 import React from "react";
 import Card from "react-bootstrap/Card"
-import "./Item.css";
+import "./Weather.css";
 import Alert from "react-bootstrap/Alert"
+import WeatherDay from "../WeatherDay/WeatherDay";
 
-class Item extends React.Component {
+class Weather extends React.Component {
   render() {
     let forecast = this.props.weatherData.map(day => 
-      <Card.Text key={day.date}>{day.date}: {day.description}<br></br>High of {day.high}&deg; | Low of {day.low}&deg;</Card.Text>
+      <WeatherDay
+        weatherData={day}
+        key={day.date}
+      />
     );
 
     return(
@@ -15,8 +19,7 @@ class Item extends React.Component {
           ?
           <Alert>Error: {this.props.errorMessage}</Alert>
           :
-          this.props.isSearched
-            ?
+          this.props.isSearched &&
             <Card>
               <Card.Header>
                 <Card.Title>{this.props.data.display_name}</Card.Title>
@@ -30,12 +33,10 @@ class Item extends React.Component {
                 {forecast}
               </Card.Footer>
             </Card>
-            :
-            <></>
         }
       </>
     )
   }
 }
 
-export default Item;
+export default Weather;
